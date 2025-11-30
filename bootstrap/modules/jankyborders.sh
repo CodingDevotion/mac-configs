@@ -14,5 +14,5 @@ tool_jankyborders_setup() {
 }
 
 tool_jankyborders_verify() {
-  verify_tool_bin jankyborders
+  verify_tool_bin borders
 }
