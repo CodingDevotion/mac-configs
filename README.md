@@ -27,11 +27,11 @@ This will automatically:
 
 Re-run make bootstrap anytime — the process is 100% idempotent.
 
-# 🧰 Tools Installed & Configured
+## 🧰 Tools Installed & Configured
 
 This repo sets up the following tools (fully modular — enable/disable as you wish):
 
-## Core
+### Core
 
 - Git — global .gitconfig
 
@@ -41,13 +41,13 @@ This repo sets up the following tools (fully modular — enable/disable as you w
 
 - VS Code — settings, keybindings, and extensions auto-installed
 
-## Window Management
+### Window Management
 
 - Aerospace — dynamic tiling window manager
 
 - SketchyBar — status bar
 
-## Developer Tools (via Brewfile)
+### Developer Tools (via Brewfile)
 
 - Homebrew itself
 
