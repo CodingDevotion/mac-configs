@@ -10,6 +10,8 @@ cask "nikitabobko/tap/aerospace"
 tap "FelixKratz/formulae"
 brew "FelixKratz/formulae/sketchybar"
 brew "FelixKratz/formulae/borders"
+cask "font-hack-nerd-font"
+cask "font-sketchybar-app-font"
 
 # Coding tools
 cask "visual-studio-code"

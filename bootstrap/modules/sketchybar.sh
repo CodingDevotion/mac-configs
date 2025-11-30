@@ -14,7 +14,8 @@ tool_sketchybar_setup() {
 }
 
 tool_sketchybar_postinstall() {
-    ensure_brew_service_started sketchybar
+    chmod -R +x "$HOME/.config/sketchybar/plugins"
+    brew services restart sketchybar
 }
 
 tool_sketchybar_verify() {
