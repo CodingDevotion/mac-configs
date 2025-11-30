@@ -13,6 +13,10 @@ tool_jankyborders_setup() {
   fi
 }
 
+tool_jankyborders_postinstall() {
+  brew services restart borders
+}
+
 tool_jankyborders_verify() {
   verify_tool_bin borders
 }
