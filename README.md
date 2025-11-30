@@ -8,8 +8,10 @@ One command transforms a fresh Mac → a complete dev environment.
 ## 🚀 **Quick Start**
 
 ```bash
-git clone https://github.com/<your-user>/mac-configs.git
+git clone https://github.com/CodingDevotion/mac-configs.git
+
 cd mac-configs
+
 make bootstrap
 ```
 
@@ -24,6 +26,32 @@ This will automatically:
 - Verify that all tools are installed and functional
 
 Re-run make bootstrap anytime — the process is 100% idempotent.
+
+# 🧰 Tools Installed & Configured
+
+This repo sets up the following tools (fully modular — enable/disable as you wish):
+
+## Core
+
+- Git — global .gitconfig
+
+- Zsh — shell configuration + Oh-My-Zsh
+
+- Neovim — full init.lua setup with lazy.nvim, LSP, and Treesitter
+
+- VS Code — settings, keybindings, and extensions auto-installed
+
+## Window Management
+
+- Aerospace — dynamic tiling window manager
+
+- SketchyBar — status bar (with post-install service start)
+
+## Developer Tools (via Brewfile)
+
+- Homebrew itself
+
+- Others you add to the Brewfile
 
 ## 😎 Why This Exists
 
