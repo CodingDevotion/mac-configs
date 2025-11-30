@@ -45,7 +45,7 @@ This repo sets up the following tools (fully modular — enable/disable as you w
 
 - Aerospace — dynamic tiling window manager
 
-- SketchyBar — status bar (with post-install service start)
+- SketchyBar — status bar
 
 ## Developer Tools (via Brewfile)
 
