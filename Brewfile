@@ -9,6 +9,7 @@ cask "nikitabobko/tap/aerospace"
 
 tap "FelixKratz/formulae"
 brew "FelixKratz/formulae/sketchybar"
+brew "FelixKratz/formulae/borders"
 
 # Coding tools
 cask "visual-studio-code"
