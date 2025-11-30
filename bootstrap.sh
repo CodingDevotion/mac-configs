@@ -5,7 +5,6 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BOOTSTRAP_DIR="$REPO_DIR/bootstrap"
 
 # Load shared logic + globals
-# shellcheck source=/dev/null
 . "$BOOTSTRAP_DIR/lib.sh"
 
 main() {
@@ -23,6 +22,7 @@ main() {
   done
 
   run_phase "setup"
+  run_phase "postinstall"
   run_phase "verify"
 
   log "Done. Re-run any time to update tools & configs."

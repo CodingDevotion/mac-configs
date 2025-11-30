@@ -7,7 +7,10 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CONFIG_DIR="$REPO_DIR/config"
 MODULES_DIR="$REPO_DIR/bootstrap/modules"
 
-TOOLS=()  # Each module calls register_tool "<name>"
+TOOLS=()  # modules call register_tool "name"
+
+# 🔹 Phases that are optional (no warnings if missing)
+OPTIONAL_PHASES=("postinstall")
 
 log()  { printf "\033[1;32m[mac-configs]\033[0m %s\n" "$*"; }
 warn() { printf "\033[1;33m[mac-configs WARN]\033[0m %s\n" "$*"; }
@@ -17,16 +20,31 @@ register_tool() {
   TOOLS+=("$1")
 }
 
+is_optional_phase() {
+  local phase="$1"
+  for p in "${OPTIONAL_PHASES[@]}"; do
+    if [ "$p" = "$phase" ]; then
+      return 0
+    fi
+  done
+  return 1
+}
+
 run_phase() {
   local phase="$1"
   log "=== phase: $phase ==="
+
   for tool in "${TOOLS[@]}"; do
     local fn="tool_${tool}_${phase}"
+
     if declare -f "$fn" >/dev/null 2>&1; then
       log "--- [$tool] $phase ---"
       "$fn"
     else
-      warn "No function $fn defined for tool '$tool'"
+      # Only warn if this phase is NOT optional
+      if ! is_optional_phase "$phase"; then
+        warn "No function $fn defined for tool '$tool'"
+      fi
     fi
   done
 }
@@ -102,5 +120,21 @@ verify_tool_bin() {
     log "$name is installed"
   else
     warn "$name NOT found"
+  fi
+}
+
+ensure_brew_service_started() {
+  local service="$1"
+
+  if ! command -v brew >/dev/null 2>&1; then
+    warn "Homebrew not found; cannot manage service '$service'."
+    return
+  fi
+
+  log "Ensuring brew service '$service' is started..."
+  if brew services start "$service" >/dev/null 2>&1; then
+    log "Service '$service' started (or already running)."
+  else
+    warn "Failed to start service '$service' via 'brew services'."
   fi
 }
