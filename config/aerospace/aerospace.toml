@@ -73,7 +73,7 @@ on-mode-changed = []
     inner.vertical =   15
     outer.left =       15
     outer.bottom =     15
-    outer.top =        15
+    outer.top =        40
     outer.right =      15
 
 # 'main' binding mode declaration
@@ -161,7 +161,10 @@ on-mode-changed = []
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
 
+    # Custom mappings
     alt-shift-q = 'close'
+    alt-f = 'fullscreen'
+    alt-r = 'mode resize'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -178,6 +181,14 @@ on-mode-changed = []
     alt-shift-j = ['join-with down', 'mode main']
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
+
+[mode.resize.binding]
+    h = 'resize width -50'
+    j = 'resize height +50'
+    k = 'resize height -50'
+    l = 'resize width +50'
+    enter = 'mode main'
+    esc = 'mode main'
 
 [[on-window-detected]]
     if.app-id = 'com.microsoft.VSCode'
