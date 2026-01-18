@@ -82,6 +82,14 @@ ensure_macos() {
   fi
 }
 
+add_zshrc() {
+  local line="$1"
+  local zshrc="$HOME/.zshrc"
+  if ! grep -q "$line" "$zshrc"; then
+    echo "$line" >>"$zshrc"
+  fi
+}
+
 ensure_xcode_cli() {
   if ! xcode-select -p >/dev/null 2>&1; then
     log "Installing Xcode Command Line Tools..."
