@@ -16,4 +16,4 @@ cask "font-sketchybar-app-font"
 # Coding tools
 cask "visual-studio-code"
 brew "fzf"
-
+brew "ripgrep"
