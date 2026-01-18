@@ -13,6 +13,11 @@ brew "FelixKratz/formulae/borders"
 cask "font-hack-nerd-font"
 cask "font-sketchybar-app-font"
 
+cask "font-iosevka-nerd-font" # Fonts needed for LazyVim
+
+# Terminal
+cask "kitty"
+
 # Coding tools
 cask "visual-studio-code"
 brew "fzf"
