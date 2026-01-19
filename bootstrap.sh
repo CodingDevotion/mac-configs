@@ -15,6 +15,13 @@ main() {
   ensure_homebrew
   brew_bundle "$REPO_DIR/Brewfile"
 
+  # Generate all theme files once before running modules
+  if [ -f "$CONFIG_DIR/colors.sh" ]; then
+    log "Generating all theme files from colors.sh..."
+    GENERATE_THEMES=1 bash "$CONFIG_DIR/colors.sh" "$CONFIG_DIR"
+    log "All theme files generated"
+  fi
+
   # Load each module: bootstrap/modules/*.sh
   for f in "$BOOTSTRAP_DIR/modules/"*.sh; do
     # shellcheck source=/dev/null
