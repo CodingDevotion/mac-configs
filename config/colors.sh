@@ -7,31 +7,31 @@
 # COLOR PALETTE - Edit these to change your theme
 # ============================================================================
 
-# Base colors (Gruvbox Modern)
-THEME_BG="#282828"              # dark0 - Main background
-THEME_BG_DARK="#1d2021"         # dark0_hard - Dark background variant
-THEME_BG_SOFT="#32302f"          # dark0_soft - Soft background
-THEME_BG_MEDIUM="#3c3836"       # dark1 - Medium background
-THEME_FG="#ebdbb2"              # light1 - Main text
-THEME_FG_DIM="#d5c4a1"          # light2 - Dimmed text
-THEME_FG_FADED="#bdae93"        # light3 - Faded text (comments)
+# Base colors (Cyberdream.nvim)
+THEME_BG="#16181a"              # Main background - Dark gray
+THEME_BG_DARK="#0a0a0a"         # Dark background variant - Almost black
+THEME_BG_SOFT="#1e2124"         # Soft background - Slightly lighter gray
+THEME_BG_MEDIUM="#3c4048"       # Medium background - Highlight background
+THEME_FG="#ffffff"              # Main text - White
+THEME_FG_DIM="#b0b0b0"          # Dimmed text - Light gray
+THEME_FG_FADED="#7b8496"        # Faded text (comments) - Medium gray
 
-# Theme color palette (Gruvbox Modern)
-THEME_RED="#cc241d"             # Red
-THEME_RED_BRIGHT="#fb4934"     # Bright red
-THEME_GREEN="#98971a"           # Green
-THEME_GREEN_BRIGHT="#b8bb26"   # Bright green
-THEME_YELLOW="#d79921"          # Yellow
-THEME_YELLOW_BRIGHT="#fabd2f"  # Bright yellow
-THEME_BLUE="#458588"            # Blue
-THEME_BLUE_BRIGHT="#83a598"    # Bright blue
-THEME_PURPLE="#b16286"          # Purple
-THEME_PURPLE_BRIGHT="#d3869b"  # Bright purple
-THEME_AQUA="#689d6a"            # Aqua
-THEME_AQUA_BRIGHT="#8ec07c"    # Bright aqua
-THEME_ORANGE="#d65d0e"          # Orange
-THEME_ORANGE_BRIGHT="#fe8019"  # Bright orange
-THEME_GRAY="#7c6f64"            # Gray (dark4)
+# Theme color palette (Cyberdream.nvim)
+THEME_RED="#ff6e5e"             # Red
+THEME_RED_BRIGHT="#ff8e7e"     # Bright red
+THEME_GREEN="#5eff6c"           # Green
+THEME_GREEN_BRIGHT="#7eff8c"   # Bright green
+THEME_YELLOW="#f1ff5e"          # Yellow
+THEME_YELLOW_BRIGHT="#ffff7e"  # Bright yellow
+THEME_BLUE="#5ea1ff"            # Blue
+THEME_BLUE_BRIGHT="#7eb1ff"    # Bright blue
+THEME_PURPLE="#bd5eff"          # Purple
+THEME_PURPLE_BRIGHT="#dd7eff"  # Bright purple
+THEME_AQUA="#5ef1ff"            # Cyan/Aqua
+THEME_AQUA_BRIGHT="#7ef1ff"    # Bright cyan
+THEME_ORANGE="#ffbd5e"          # Orange
+THEME_ORANGE_BRIGHT="#ffdd7e"  # Bright orange
+THEME_GRAY="#7b8496"            # Gray
 
 # Export all theme colors
 export THEME_BG THEME_BG_DARK THEME_BG_SOFT THEME_BG_MEDIUM
@@ -48,11 +48,11 @@ export THEME_ORANGE THEME_ORANGE_BRIGHT THEME_GRAY
 
 export TOKEN_BACKGROUND="$THEME_BG"
 export TOKEN_BACKGROUND_DARK="$THEME_BG_DARK"
-export TOKEN_PRIMARY="$THEME_YELLOW_BRIGHT"    # Primary accent (active/focused)
-export TOKEN_SECONDARY="$THEME_BLUE_BRIGHT"   # Secondary accent (inactive, cursor)
+export TOKEN_PRIMARY="$THEME_PURPLE"          # Primary accent (active/focused) - Purple
+export TOKEN_SECONDARY="$THEME_AQUA"          # Secondary accent (inactive, cursor) - Cyan
 export TOKEN_TEXT="$THEME_FG"
 export TOKEN_TEXT_DIM="$THEME_FG_DIM"
-export TOKEN_BORDER="$THEME_YELLOW_BRIGHT"    # Border color
+export TOKEN_BORDER="$THEME_PURPLE"           # Border color - Purple
 export TOKEN_BORDER_INACTIVE="$THEME_GRAY"    # Inactive border
 
 # ============================================================================
@@ -158,7 +158,7 @@ mark2_background $TOKEN_PRIMARY
 mark3_foreground $TOKEN_BACKGROUND
 mark3_background $TOKEN_PRIMARY
 
-# The 16 terminal colors (Gruvbox Modern)
+# The 16 terminal colors
 color0 $TOKEN_BACKGROUND
 color8 $THEME_BG_MEDIUM
 color1 $THEME_RED

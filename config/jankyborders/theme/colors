@@ -2,5 +2,5 @@
 # Unified semantic tokens for jankyborders
 
 # Border colors (using unified tokens)
-BORDER_ACTIVE=0xFFFABD2F
-BORDER_INACTIVE=0xFF7C6F64
+BORDER_ACTIVE=0xFFBD5EFF
+BORDER_INACTIVE=0xFF7B8496
