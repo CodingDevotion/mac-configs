@@ -115,6 +115,8 @@ export NVM_DIR="$HOME/.nvm"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias repos='cd ~/documents/repos/'
+alias vim='nvim'
+alias n='nvim'
 
 # pnpm
 export PNPM_HOME="/Users/macbookair/Library/pnpm"
